@@ -14,15 +14,14 @@ defmodule SequenceProgression do
   73
 
   The basic app should work out sequences that simply add/subtract a number to
-  their elements just like the above example
+  their elements just like the above examples
 
   If you want to go further, try doing multiplication/division, eg:
 
-      Input_2:  2, 4, 8, 16, 32
-      Output_2: 64
-
-      Input_3: 1024, -512, 256, -128, 64 O
-      utput_3: -32
+  iex> SequenceProgression.next [2, 4, 8, 16, 32]
+  64
+  iex> SequenceProgression.next [1024, -512, 256, -128, 64]
+  -32
 
   ### Challenges:
 
@@ -39,6 +38,7 @@ defmodule SequenceProgression do
 
   @solvers [
     SequenceProgression.Algebraic,
+    SequenceProgression.Geometric,
   ]
 
   def next(sequence, solvers\\@solvers) do
