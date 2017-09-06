@@ -41,10 +41,12 @@ defmodule SequenceProgression do
   (Progression here is: ^2 of its index)
   """
 
-  @solvers []
+  @solvers [
+    SequenceProgression.Algebraic,
+  ]
 
   def next(sequence, solvers\\@solvers) do
     solvers
-    |> Enum.find(fn solver -> solver.next sequence end)
+    |> Enum.find_value(fn solver -> solver.next sequence end)
   end
 end
