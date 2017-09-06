@@ -10,8 +10,8 @@ defmodule SequenceProgression do
 
   iex> SequenceProgression.next [1, 3, 5, 7, 9]
   11
-
-  (Progression here is: +2 previous value)
+  iex> SequenceProgression.next [100, 91, 82]
+  73
 
   The basic app should work out sequences that simply add/subtract a number to
   their elements just like the above example
@@ -21,12 +21,8 @@ defmodule SequenceProgression do
       Input_2:  2, 4, 8, 16, 32
       Output_2: 64
 
-  (Progression here is: x2 previous value)
-
       Input_3: 1024, -512, 256, -128, 64 O
       utput_3: -32
-
-  (Progression here is: /-2 previous value)
 
   ### Challenges:
 
